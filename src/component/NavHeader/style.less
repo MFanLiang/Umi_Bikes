@@ -1,0 +1,38 @@
+@height: 30px;
+
+.sysTimes {
+  background-color: dodgerblue;
+  text-align: center;
+  margin-right: 3vh;
+}
+
+.NavHeader {
+  .header_top {
+    background-color: #ffffff;
+  }
+
+  .header_bottom {
+    height: @height;
+    border-top: 1px solid #f0f;
+    background: #ffffff;
+    padding: 0 50px;
+
+    .pagetitle {
+      position: relative;
+      line-height: @height;
+      font-weight: 600;
+
+      //绘制面包屑的小箭头
+      &::after {
+        position: absolute;
+        content: '';
+        border-top: 12px solid #ffffff;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        top: 26px;
+        left: 1px;
+      }
+    }
+  }
+}
