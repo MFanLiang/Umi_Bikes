@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './home.less'
+import './pages.less'
 
 interface IHomePageProps {
 }

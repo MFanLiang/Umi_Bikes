@@ -20,9 +20,9 @@ const _layout: React.FunctionComponent<I_layoutProps> = (props) => {
 			<NavLeft></NavLeft>
 		</Sider>
 
-		<Content>
+		<Content style={{ maxHeight: '100vh', overflow: 'scroll' }}>
 			<NavHeader />
-			<Content style={{ minHeight: "60vh", border: "1px solid #000", margin: "12px" }}>
+			<Content style={{ minHeight: "60vh", margin: "12px" }}>
 				{/* props.children是指：根据路由加载的不同页面，在其显示不同的组件 比如切换到home页面，此时就是/home；切换到主页面，此时就是/ */}
 				{props.children}
 			</Content>

@@ -4,6 +4,12 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+
+  //配置路由类型
+  history: {
+    type: 'hash'
+  },
+
   "theme": {
     "primary-color": "#33FF00",
   },
