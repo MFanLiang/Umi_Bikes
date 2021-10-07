@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Layout } from 'antd'
 import NavLeft from '@/component/NavLeft';
 import NavHeader from '@/component/NavHeader';
+import "./loading.less"
 
 const { Content, Footer, Sider } = Layout;
 
