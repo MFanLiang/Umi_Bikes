@@ -71,7 +71,7 @@ const menuList: Array<menuItem> = [
 			},
 			{
 				title: '高级表格',
-				key: '/table/high',
+				key: '/table/hight',
 			},
 		],
 	},

@@ -18,11 +18,11 @@ export default {
 		let baseUrl: string;
 
 		//判断isMock，如果为true，就使用Mock测试接口，如果为false就使用真实接口
-		if (option.isMock) {
+		if (!option.isMock) {
 			//使用mock服务器，使用假数据来进行数据操作
 			baseUrl = 'https://www.fastmock.site/mock/f6da1c3db04977b7cb8c948967e1c050/bikesmfl';
 		} else {
-			baseUrl = 'https://www.fastmock.site/mock/47398fb813ab0edd784b0e37daf87476/dc63';
+			baseUrl = 'https://www.fastmock.site/mock/f6da1c3db04977b7cb8c948967e1c050/';
 		}
 
 		//控制Loading加载效果显示和隐藏
@@ -42,9 +42,9 @@ export default {
 			})
 				.then(response => {
 					//判断一下当前请求状态码
-					let res:any = response.data;
+					let res: any = response.data;
 					if (response.status == 200) {
-						if (res.code == 0) {
+						if (res.code == 200) {
 							resolve(res)
 						} else {
 							Modal.info({
@@ -57,7 +57,7 @@ export default {
 					}
 				})
 				.catch(err => {
-					message.info('出现了问题啦' + err.message)
+					message.info('出现网络连接问题，错误状态：' + err.message)
 				})
 				.finally(() => {
 					loading.style.display = 'none';
